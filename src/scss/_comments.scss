@@ -1,0 +1,29 @@
+.comments {
+    .comments_list {
+        .comment {
+            margin: 0 auto;
+            margin-top: 40px;
+            padding: 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border: 1px solid #CECECE;
+            .ratings {
+                .checked {
+                    color:orange;
+                }
+            }
+            .ratings {
+                width: 145px;
+            }
+            &_text  {
+                width: 90%;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 24px;  
+                color: #303030;
+            }
+        }
+    }
+}

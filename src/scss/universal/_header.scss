@@ -1,0 +1,185 @@
+header {
+    .top {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .item {
+                transition: .3s all; 
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+            svg , img {
+                cursor: pointer;
+                width: 42px;
+                height: 30px;
+                margin-right: 15px;
+                path {
+                transition: .3s all; 
+                }
+                &:hover {
+                    path {
+                        fill: $main-1;
+                    }
+                }
+            }
+        }
+        .input {
+            position: relative;
+            width: 480px;
+            height: 56px;
+            &::before {
+                content: url('../icon/search.svg');
+                position: absolute;
+                left: 15px;
+                top: 55%;
+                transform: translateY(-50%);
+            }
+        }
+        input {
+            padding: 15px 15px 15px 70px;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 24px;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px solid #989898;
+            border-radius: 5px;
+            &:focus {
+                outline-color: $main-2;
+            }
+        }
+    }
+
+    .bottom {
+        margin-top: 30px;
+        background: $main-2;
+        position: relative;
+        nav {
+            display: block;
+            color: white;
+            a {
+                color: white;
+            }
+        }
+        .list_wrapper {
+            z-index: 3;
+            height: 75px;
+            padding:0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .div_item {
+                cursor: pointer;
+                flex: 1;
+                z-index: 3;
+                img {
+                    margin-right: 8px;
+                    transition: .3s all;
+                }
+                height: 100%;
+                width: 100%;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-right: 3px white solid;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 27px;
+                &:hover {
+                    color: $main-1;
+                    img {
+                        transform: translateY(-5px);
+                    }
+                }
+                &:nth-child(1) {
+                    flex: 1.25;
+                }
+                &:nth-last-child(1) {
+                    font-weight: 400;
+                    flex: 1.25;
+                    border-right:none;
+                    color:black;
+                    &:hover {
+                        color: $main-2;
+                        img {
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: -1;
+                    width: 22.6%;
+                    height: 100%;
+                    background: $main-1;
+                }
+            }
+          
+        }
+        
+    }
+}
+
+
+
+@media (max-width:1199px) {
+
+    header .bottom .list_wrapper .div_item {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:991px) {
+    header .bottom .list_wrapper .div_item {
+        font-size: 16px;
+    }
+
+    header .top .input {
+        display: none;
+    }
+    header .bottom .list_wrapper .div_item:nth-child(1) ,header .bottom .list_wrapper .div_item:nth-last-child(1) {
+        flex: 1;
+    }
+
+    header .bottom .list_wrapper .div_item::before {
+        width: 19.8%;
+    }
+    
+}
+
+
+@media (max-width:767px) {
+    header .bottom .list_wrapper {
+        display: none;
+    }
+}
+
+@media (max-width:575px) {
+    header .top {
+        flex-direction: column;
+    }
+    header {
+        img[alt=logo] {
+            width: 12rem;
+        }
+    }
+    .product_info {
+        width: 100%;
+    }
+
+    .addittional_info .section_title {
+        width: 100%;
+    }
+}

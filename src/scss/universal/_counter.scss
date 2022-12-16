@@ -1,0 +1,49 @@
+.counts {
+    width: 220px;
+    height: 66px;          
+    background: #F5F5F5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    transition: .3s all;
+    cursor: pointer;
+    &:hover {
+        background: $main-2;
+        .plus , .minus {
+            background: $main-1;
+        }
+        .count {
+            color: white;
+        }
+    }
+    .plus , .minus {
+        cursor: pointer;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        left: 750px;
+        top: 714px;        
+        background: #D1D1D1;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;           
+        color: #EAEAEA;
+    }
+    .plus {
+        margin-left: 25px;
+    }
+    .minus {
+        margin-right: 25px;
+    }
+
+    .count {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;    
+        color: #363636;
+    }
+}
