@@ -169,6 +169,9 @@ header {
 @media (max-width:575px) {
     header .top {
         flex-direction: column;
+        .buttons {
+            margin-top: 20px;
+        }
     }
     header {
         img[alt=logo] {
