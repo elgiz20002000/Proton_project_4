@@ -1,4 +1,32 @@
 header {
+    padding: 20px 0;
+    .ui.compact.menu .item:last-child {
+        justify-content: center !important;
+    }
+     .ui.compact.menu .item:last-child {
+        padding: 0 ;
+    }
+    .ui {
+        height: 100%;
+        width: 100%;
+        background: $main-2 !important;
+        border: none !important;
+        color: white !important;
+        box-shadow: none !important;
+      
+        img {
+            width: 23px;
+            height: 23px;
+        }
+        span {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 27px;
+            &:hover {
+                color: $main-1;
+            }
+        }
+    }
     .top {
         display: flex;
         justify-content: space-evenly;
@@ -65,6 +93,7 @@ header {
             color: white;
             a {
                 color: white;
+                text-decoration: none;
             }
         }
         .list_wrapper {
@@ -134,17 +163,18 @@ header {
 
 
 @media (max-width:1199px) {
-
+    .ui {
+        span {
+            font-size: 16px  !important;
+        }
+    }
     header .bottom .list_wrapper .div_item {
-        font-size: 20px;
+        font-size: 16px;
     }
 
 }
 
 @media (max-width:991px) {
-    header .bottom .list_wrapper .div_item {
-        font-size: 16px;
-    }
 
     header .top .input {
         display: none;
@@ -155,6 +185,12 @@ header {
 
     header .bottom .list_wrapper .div_item::before {
         width: 19.8%;
+    }
+    header .bottom .list_wrapper .div_item:nth-child(1) {
+        display: none;
+    }
+    header .bottom .list_wrapper .div_item::before {
+        width: 24.7%;
     }
     
 }
@@ -175,7 +211,7 @@ header {
     }
     header {
         img[alt=logo] {
-            width: 12rem;
+            width: 18rem;
         }
     }
     .product_info {
@@ -186,3 +222,4 @@ header {
         width: 100%;
     }
 }
+

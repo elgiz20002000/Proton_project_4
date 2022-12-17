@@ -97,6 +97,10 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    transition: .3s all;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
             .side_2 {
@@ -168,6 +172,10 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        transition: .3s all;
+                        &:hover {
+                            transform: scale(1.05);
+                        }
                     }
                 }
             }

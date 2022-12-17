@@ -12,17 +12,12 @@ export const btns = () => {
     search_overlay.classList.add("active");
   });
 
-  let menu_btn = document.querySelectorAll(".menu"),
-    exit_btn_menu = document.querySelector(".menu_overlay .exit_btn");
+  let menu_btn = document.querySelectorAll(".menu")
 
   menu_btn.forEach(item => {
     item.addEventListener("click", () => {
-      document.querySelector(".menu_overlay").classList.add("active");
       document.querySelector('.top_navbar').classList.remove('active')
     });
   })
 
-  exit_btn_menu.addEventListener("click", (e) => {
-    document.querySelector(".menu_overlay").classList.remove("active");
-  });
 };
