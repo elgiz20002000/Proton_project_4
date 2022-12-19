@@ -124,6 +124,9 @@ header {
                 line-height: 27px;
                 &:hover {
                     color: $main-1;
+                    span {
+                        color: $main-1;
+                    }
                     img {
                         transform: translateY(-5px);
                     }

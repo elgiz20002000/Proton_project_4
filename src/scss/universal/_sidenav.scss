@@ -1,22 +1,26 @@
 .offcanvas {
-    background: $main-2; 
+    overflow-y:scroll;
+
     .offcanvas-body {
         height: 100%;
-        overflow-y:scroll;
+        overflow-x: hidden;
     }
     .products {
         display: none;
     }
+    .ui.simple.dropdown:hover>.menu>.item:hover>.menu, .ui.simple.dropdown>.menu>.item:active>.menu {
+        left: 2% !important;
+        position: static !important;
+    }
     .ui {
         padding: 0 !important;
-        background: $main-2;
         border: none !important;
-        color: white !important;
+        color: black !important;
         box-shadow: none !important;
         span {
             font-weight: 400;
             font-size: 29px !important;
-            color: white;
+            color: black;
             &:hover {
                 color: $main-1;
             }
@@ -37,7 +41,7 @@
             a {
                 text-decoration: none;
                 font-size: 29px;
-                color: white;
+                color: black;
                 transition: .2s all;
                 &:hover {
                     color: $main-1;
@@ -50,10 +54,5 @@
 @media (max-width:991px) {
     .offcanvas .products {
         display: block ;
-    }
-
-    .ui.simple.dropdown:hover>.menu>.item:hover>.menu, .ui.simple.dropdown>.menu>.item:active>.menu {
-        left: 2% !important;
-        position: static !important;
     }
 }

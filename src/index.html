@@ -166,35 +166,50 @@
                   <div class="price">
                     <span>820.00</span> AZN
                   </div>
-                  <div class="params_wrapper">
+                  <form class="params_wrapper">
                     <div class="choose_size">
                         <h3>Ölçünü seçin</h3>
                         <div class="sizes">
-                          <div class="size selected">5 m</div>
-                          <div class="size">10 m</div>
+                          <div class="size selected">
+                            <input checked type="checkbox" name="size" value="5">
+                            <span>5</span>m
+                          </div>
+                          <div class="size">
+                            <input type="checkbox" name="size" value="10">
+                            <span>10</span> m</div>
                         </div>
                     </div>
 
                     <div class="choose_color">
                       <h3>Rəngi seç</h3>
                       <div class="colors">
-                        <div class="color red selected"></div>
-                        <div class="color blue"></div>
-                        <div class="color yellow"></div>
-                        <div class="color green"></div>
+                        <div class="color red selected">
+                          <input checked type="checkbox" name="color" value="red">
+                        </div>
+                        <div class="color blue">
+                          <input type="checkbox" name="color" value="blue">
+                        </div>
+                        <div class="color yellow">
+                            <input type="checkbox" name="color" value="yellow">
+                        </div>
+                        <div class="color green">
+                            <input type="checkbox" name="color" value="green">
+                        </div>
                       </div>
-                    </div>             
-                  </div>
+                    </div>     
+
+                  
                   <div class="bottom_wrapper">
                     <div class="counts">
                       <div class="minus">-</div>
-                      <div class="count">1</div>
+                      <input readonly name="count" value="1" min="1" type="number" class="count">
                       <div class="plus">+</div>
                     </div>
-                    <div class="add_to_cart">
+                    <button class="add_to_cart">
                       Səbətə at
-                    </div> 
+                    </button> 
                   </div>
+                </form>
 
                   <div class="properties">
                     <h3>Xüsusiyyətləri:</h3>
